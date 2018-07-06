@@ -7,7 +7,7 @@ import java.lang.*;
 
 public class RaidG {
 	private Formatter x;
-	ArrayList<player> places = new ArrayList<player>();
+	ArrayList<player> raidGroup = new ArrayList<player>();
 	File f=new File("C:\\Users\\596937\\Documents\\RaidSupp.txt");
 	int healers=0;
 	int dps=0;
@@ -21,25 +21,25 @@ public class RaidG {
 	
 	//This sets the objects current RaidGroup
 	public void setRaidG(ArrayList<player> raid) {
-		places=raid;
+		raidGroup=raid;
 	}
 	
 	//This Returns the arraylist of raiders commonly known as the RaidGroup
 	public ArrayList<player> getRaidG(){
-		return places;
+		return raidGroup;
 	}
 	
 	
 	//Gets the role count of the raid to display composition.
 	public void getRoleCount() {
-	for(int i=0;i<places.size();i++) {
-		if(places.get(i).wowclass.getRole().equals("healer")) {
+	for(int i=0;i<raidGroup.size();i++) {
+		if(raidGroup.get(i).wowclass.getRole().equals("healer")) {
 			healers++;
 		}
-		else if(places.get(i).wowclass.getRole().equals("dps")) {
+		else if(raidGroup.get(i).wowclass.getRole().equals("dps")) {
 			dps++;
 		}
-		else if(places.get(i).wowclass.getRole().equals("tank")) {
+		else if(raidGroup.get(i).wowclass.getRole().equals("tank")) {
 			tanks++;
 		}
 		

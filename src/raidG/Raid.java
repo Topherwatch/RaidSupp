@@ -16,7 +16,7 @@ public class Raid {
 		RaidG raid=new RaidG();
 		
 		raid.setRaidG(createRaidTest());
-		raid.places.get(1).getWclass().getabilities();
+		raid.raidGroup.get(1).getWclass().getabilities();
 	
 
 		try {
