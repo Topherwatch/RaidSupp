@@ -1,5 +1,7 @@
 package raidG;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import raidG.classes.Priest;
@@ -15,9 +17,21 @@ public class Raid {
 		
 		raid.setRaidG(createRaidTest());
 		raid.places.get(1).getWclass().getabilities();
+	
+
+		try {
+			String s="yo yo yo";
+			File f=new File("RaidSupp.txt");
+		raid.write(s, f);
+		}
+		catch(IOException e) {
+			
+			}
+		}
+		
 
 
-	}
+	
 	
 	public static ArrayList<player> createRaidTest(){
 		

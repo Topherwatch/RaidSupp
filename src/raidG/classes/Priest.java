@@ -5,6 +5,7 @@ import raidG.classes.abilities.DivineHymn;
 public class Priest extends Wclass {
 	String spec="heals";
 	String role="healer";
+	//Abilities for Priest
 	DivineHymn DivineHymn=new DivineHymn();
 	
 	
