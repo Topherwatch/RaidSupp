@@ -15,10 +15,11 @@ public class DivineHymn extends abilities{
 	int skillId;
 	
 	public void use(int time) {
-
+		
+		if(isUsable(time)) {
 		readyToUse=time+cooldown;
 		System.out.println("Hymn used at: "+time);
-		
+		}
 	}
 	
 	public int getCooldown() {

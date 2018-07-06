@@ -14,9 +14,18 @@ public class Raid {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RaidG raid=new RaidG();
+		raid.createPlayer("jessie",1);
+		raid.getRaidG().get(0).wowclass.getabilities();
+		raid.getRaidG().get(0).wowclass.printWclass();
+		raid.createPlayer("jessie",2);
+		raid.getRaidG().get(1).wowclass.printWclass();
+		System.out.println(raid.getRaidG().size());
+
+
 		
-		raid.setRaidG(createRaidTest());
-		raid.raidGroup.get(1).getWclass().getabilities();
+
+		
+		
 	
 
 		try {
@@ -37,10 +46,13 @@ public class Raid {
 		
 		ArrayList<player> players=new ArrayList<player>();
 		Wclass Priest=new Priest();
+		Wclass Priest2=new Priest();
+		Wclass Priest3=new Priest();
+		Wclass Priest4=new Priest();
 		player jessie=new player("healer",Priest);
-		player spiffy=new player("healer",Priest);
-		player zombie=new player("healer",Priest);
-		player cotton=new player("healer",Priest);
+		player spiffy=new player("healer",Priest2);
+		player zombie=new player("healer",Priest3);
+		player cotton=new player("healer",Priest4);
 		players.add(jessie);
 		players.add(spiffy);
 		players.add(zombie);
