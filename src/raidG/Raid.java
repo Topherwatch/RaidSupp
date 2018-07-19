@@ -4,22 +4,28 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import raidG.classes.Priest;
 import raidG.classes.Wclass;
 import raidG.classes.abilities.DivineHymn;
 import raidG.classes.abilities.abilities;
 
-public class Raid {
+public class Raid extends Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		RaidG raid=new RaidG();
-		raid.createPlayer("jessie",1);
-		raid.getRaidG().get(0).wowclass.getabilities();
-		raid.getRaidG().get(0).wowclass.printWclass();
-		raid.createPlayer("jessie",2);
-		raid.getRaidG().get(1).wowclass.printWclass();
-		System.out.println(raid.getRaidG().size());
+		//RaidG raid=new RaidG();
+	    //raid.createPlayer("jessie",1);
+		//raid.getRaidG().get(0).wowclass.getabilities();
+		//raid.getRaidG().get(0).wowclass.printWclass();
+		//raid.createPlayer("jessie",2);
+		//raid.getRaidG().get(1).wowclass.printWclass();
+		//System.out.println(raid.getRaidG().size());
+		launch(args);
 
 
 		
@@ -28,14 +34,14 @@ public class Raid {
 		
 	
 
-		try {
-			String s="yo yo yo";
-			File f=new File("RaidSupp.txt");
-		raid.write(s, f);
-		}
-		catch(IOException e) {
+		//try {
+			//String s="yo yo yo";
+			//File f=new File("RaidSupp.txt");
+		//raid.write(s, f);
+		//}
+		//catch(IOException e) {
 			
-			}
+		//	}
 		}
 		
 
@@ -59,6 +65,22 @@ public class Raid {
 		players.add(cotton);
 		return players;
 		
+	}
+
+
+
+
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("tableview.fxml"));
+			Scene scene = new Scene(root,400,400);
+			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
