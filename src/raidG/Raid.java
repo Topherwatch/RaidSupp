@@ -3,7 +3,6 @@ package raidG;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,14 +17,17 @@ public class Raid extends Application {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//RaidG raid=new RaidG();
+		RaidG raid=new RaidG();
+		raid.createRaider();
+		raid.getRaidG().size();
 	    //raid.createPlayer("jessie",1);
 		//raid.getRaidG().get(0).wowclass.getabilities();
 		//raid.getRaidG().get(0).wowclass.printWclass();
 		//raid.createPlayer("jessie",2);
 		//raid.getRaidG().get(1).wowclass.printWclass();
 		//System.out.println(raid.getRaidG().size());
-		launch(args);
+		//launch(args);
+		
 
 
 		

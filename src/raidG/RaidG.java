@@ -82,6 +82,26 @@ public class RaidG {
 		
 		}
 		
+		//Creates a player to add to the raid group (user input  version temp)
+		public void createRaider() {
+			displayClassList();
+			assignClass(getChoice());
+			player player=new player("testName",cClass);
+			raidGroup.add(player);
+			
+			
+		}
+		
+		
+		//Gets a choice number from user to decide which class to choose. 
+		public int getChoice() {
+			System.out.print("Choice: ");
+			Scanner scan = new Scanner(System.in);
+			int i = scan.nextInt();
+			scan.close();
+			return i;
+		}
+		
 		//Helper method to help determine which class to create.
 		public void assignClass(int a) {	
 			if(a==1) {
@@ -120,5 +140,22 @@ public class RaidG {
 			if(a==12) {
 				this.cClass =new DeathKnight();		
 			}
+		}
+		public void displayClassList() {
+			System.out.println("Press 1  to select Priest");
+			System.out.println("Press 2  to select Druid");
+			System.out.println("Press 3  to select Shaman");
+			System.out.println("Press 4  to select Monk");
+			System.out.println("Press 5  to select Paladin");
+			System.out.println("Press 6  to select Rogue");
+			System.out.println("Press 7  to select Mage");
+			System.out.println("Press 8  to select Warlock");
+			System.out.println("Press 9  to select Warrior");
+			System.out.println("Press 10 to select Hunter");
+			System.out.println("Press 11 to select DemonHunter");
+			System.out.println("Press 12 to select Deathknight");
+			System.out.println("Press 0 to go back");
+			
+			
 		}
 }
